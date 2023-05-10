@@ -1,3 +1,3 @@
 FROM scratch
-COPY main /app
-ENTRYPOINT "/app"
+COPY main-compressed /app
+ENTRYPOINT ["/app"]
