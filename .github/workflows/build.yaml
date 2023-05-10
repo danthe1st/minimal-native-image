@@ -25,8 +25,7 @@ jobs:
     - name: compress
       run: upx --lzma --best -o main-compressed main
     - name: Create Docker image
-      run: |
-        docker build -t hello-world-native-java .
+      run: docker build -t dan1st/hello-world-native-java .
     - name: Inspect
       run: docker inspect dan1st/hello-world-native-java
     - name: Run
