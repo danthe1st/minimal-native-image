@@ -17,7 +17,7 @@ jobs:
     - name: Build Java
       run: javac Main.java
     - name: Build image
-      run: native-image --static --libc=musl --gc=epsilon -O3 --native-compiler-options="-Wl,--strip-all" Main
+      run: native-image --static --libc=musl --gc=epsilon -march=compatibility -O3 --native-compiler-options="-Wl,--strip-all" Main
     - name: Install UPX
       uses: crazy-max/ghaction-upx@v2
       with:
