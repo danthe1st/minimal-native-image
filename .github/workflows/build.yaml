@@ -41,7 +41,9 @@ jobs:
     - name: Push to Docker Hub
       if: github.ref == 'refs/heads/master'
       run: docker push dan1st/hello-world-native-java
-    - uses: actions/upload-artifact@v4
-      path: build-report.html
-      name: build-report
+    - name: upload build report
+      uses: actions/upload-artifact@v4
+      with:
+        path: build-report.html
+        name: build-report
 
